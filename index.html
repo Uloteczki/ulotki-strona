@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ulotki - Gmina Oleśnica</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+  <h1>Roznoszenie ulotek - Gmina Oleśnica</h1>
+  <section id="kalkulator">
+    <h2>Kalkulator</h2>
+    <form id="formKalkulator">
+      <select id="typ">
+        <option value="mieszkania">Mieszkania</option>
+        <option value="domy">Domy</option>
+        <option value="wioski">Wioski</option>
+      </select>
+      <input type="number" id="ilosc" placeholder="Liczba ulotek" />
+      <button type="submit">Oblicz cenę</button>
+    </form>
+    <div id="wynik"></div>
+  </section>
+  <section id="mapa">
+    <h2>Mapa</h2>
+    <div id="map" style="height: 400px;"></div>
+  </section>
+  <section id="koszyk">
+    <h2>Koszyk</h2>
+    <ul id="listaKoszyk"></ul>
+    <form action="https://formsubmit.co/uloteczki1234@outlook.com" method="POST">
+      <input type="hidden" name="koszyk" id="koszykInput">
+      <input type="text" name="imie" placeholder="Imię" required>
+      <input type="text" name="telefon" placeholder="Telefon" required>
+      <button type="submit">Wyślij</button>
+    </form>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>
